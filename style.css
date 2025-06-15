@@ -1,0 +1,278 @@
+:root {
+    --gray: rgba(1, 1, 1, .1);
+    --darkgray: rgb(129, 129, 143);
+    --primary: #6b46c1;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    height: 85px;
+    display: flex;
+    padding: 0 10%;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px 0 var(--gray);
+}
+
+.navbar > h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.hero-container {
+    display: flex;
+    height: 470px;
+    padding: 0 10%;
+}
+
+.hero-container > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container h1 {
+    font-size: 60px;
+    width: 360px;
+}
+
+.hero-container p {
+    font-size: 30px;
+    color: var(--darkgray);
+}
+
+.hero-container > img {
+    width: 50%;
+    height: 323px;
+    align-self: center;
+    border-radius: 15px;
+    box-shadow: 20px 20px 0 0 var(--gray);
+}
+
+.description-container {
+    height: 300px;
+    margin: 40px 10%;
+    padding: 0 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 20px 0 var(--gray);
+}
+
+.description-container > div {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description-container > div > div {
+    width: 500px;
+}
+
+.description-container > img {
+    width: 40%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.description-left-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.font-darkgray {
+    color: var(--darkgray);
+}
+
+.content-container {
+    min-height: 400px;
+    margin: 40px 0;
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.content-container .card {
+    height: 100%;
+}
+
+.card {
+    box-shadow: 0 2px 4px 0 var(--gray);
+}
+
+.card:hover {
+    box-shadow: 0 2px 4px 0 var(--darkgray);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.card > .card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 0 15px 0 0;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+.card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: fill;
+    height: 240px;
+}
+
+.what-container {
+    max-height: 600px;
+    padding: 0 10%;
+    display: flex;
+}
+
+.what-container > div {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--gray);
+}
+
+.what-container > div > div {
+    width: 400px;
+}
+
+.what-container > img {
+    width: 52%;
+}
+
+.what-container h1 {
+    font-size: 40px;
+}
+
+.what-container > div > .footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10%;
+    margin: 40px 0;
+}
+
+.btn {
+    background: var(--primary);
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+footer {
+    height: 85px;
+    display: flex;
+    padding: 0 10%;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 8px 2px 4px 8px var(--gray);
+}
+
+.footer-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-menu:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 420px){
+    .hero-container,
+    .description-container {
+        height: 100%;
+    }
+
+    .hero-container,
+    .description-container,
+    .content-container,
+    .what-container {
+        flex-wrap: wrap;
+    }
+
+    footer > p,
+    .hero-container > div,
+    .hero-container > img,
+    .description-container > div,
+    .description-container > div > div,
+    .description-container > img,
+    .what-container > div,
+    .what-container > div > div,
+    .what-container > img,
+    .button-container > .btn {
+        width: 100%;
+    }
+
+    .description-container > div {
+        padding: 5%;
+    }
+
+    .hero-container > div {
+        height: 250px;
+    }
+
+    .hero-container > img {
+        height: 100%;
+    }
+
+    .hero-container h1,
+    .hero-container p,
+    footer p {
+        text-align: center;
+    }
+
+    .hero-container h1 {
+        font-size: 36px;
+    }
+
+    .hero-container p {
+        font-size: 18px;
+    }
+
+    .content-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav > .nav-menu,
+    footer > .footer-menu {
+        display: none;
+    }
+
+}
